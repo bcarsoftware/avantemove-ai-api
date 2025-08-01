@@ -32,6 +32,8 @@ This route has a Request Body:
 
 The list named **beliefs** is unlimited, BUT...
 
+It can't be null or empty.
+
 Each item can't contain:
 1. consecutive spaces characters;
 2. the max length is between 1 until 32.
