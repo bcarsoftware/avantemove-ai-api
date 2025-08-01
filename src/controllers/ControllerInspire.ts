@@ -1,8 +1,8 @@
 import {Request, Response} from "express";
-import {PromptDTO} from "../dtos/PromptDTO";
-import {HttpUtil} from "../utils/HttpUtil";
-import {Inspire} from "../models/Inspire";
-import {ServiceInspire} from "../services/ServiceInspire";
+import {PromptDTO} from "@dtos/PromptDTO";
+import {HttpUtil} from "@utils/HttpUtil";
+import {Inspire} from "@models/Inspire";
+import {ServiceInspire} from "@services/ServiceInspire";
 
 export class ControllerInspire {
     private readonly service: ServiceInspire;

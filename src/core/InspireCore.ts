@@ -1,5 +1,5 @@
-import {AISDKPromptDTO} from "../dtos/AISDKPromptDTO";
-import {Inspire} from "../models/Inspire";
+import {AISDKPromptDTO} from "@dtos/AISDKPromptDTO";
+import {Inspire} from "@models/Inspire";
 import {generateText} from "ai";
 
 export class InspireCore {

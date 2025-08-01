@@ -1,5 +1,5 @@
 import {Router, Request, Response} from "express";
-import {ControllerInspire} from "../controllers/ControllerInspire";
+import {ControllerInspire} from "@controllers/ControllerInspire";
 
 const inspireRoutes: Router = Router();
 

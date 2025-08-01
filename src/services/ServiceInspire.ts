@@ -1,8 +1,8 @@
-import {Inspire} from "../models/Inspire";
-import {PromptDTO} from "../dtos/PromptDTO";
-import {AISDKPromptDTO} from "../dtos/AISDKPromptDTO";
-import {BaseException} from "../exceptions/BaseException";
-import {InspireCore} from "../core/InspireCore";
+import {Inspire} from "@models/Inspire";
+import {PromptDTO} from "@dtos/PromptDTO";
+import {AISDKPromptDTO} from "@dtos/AISDKPromptDTO";
+import {BaseException} from "@exceptions/BaseException";
+import {InspireCore} from "@core/InspireCore";
 import {createGoogleGenerativeAI} from '@ai-sdk/google';
 
 export class ServiceInspire {
@@ -15,12 +15,13 @@ export class ServiceInspire {
     async generateInspireMessage(promptDTO: PromptDTO): Promise<Inspire> {
         await this.checkPromptDTO(promptDTO);
 
-        const modelAI = process.env.MODEL_AI || "";
+        const modelAI: string = process.env.MODEL_AI || "";
+        const apiKey: string = process.env.GOOGLE_GENERATIVE_AI_API_KEY || "";
 
         const prompt = await this.createPrompt(promptDTO.beliefs);
 
         const google = createGoogleGenerativeAI({
-            apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY,
+            apiKey: apiKey,
         });
 
         const aiSDKPrompt: AISDKPromptDTO = {
@@ -53,11 +54,9 @@ export class ServiceInspire {
         const values = beliefs.join(",");
 
         return (
-            `Escreva uma mensagem motivacional entre 40-50 caracteres, 
-            em português do Brasil, 
-            personalizada para alguém com valores de 
-            ${values}, 
-            para manter um hábito diário. Não utilize emojis.`
+            "Please write a motivational and inspirational message between 60-70 characters, " +
+            "in brazilian portuguese, customized for someone who beliefs these values: " + values +
+            ". To keep a new daily habit. Don't use emojis."
         );
     }
 }

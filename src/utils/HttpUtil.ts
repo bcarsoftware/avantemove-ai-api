@@ -1,5 +1,5 @@
 import {Request, Response} from "express";
-import {BaseException} from "../exceptions/BaseException";
+import {BaseException} from "@exceptions/BaseException";
 
 export class HttpUtil {
     public static async successResponse<T>(response: Response, data: T, status: number = 200): Promise<Response> {
