@@ -1,6 +1,15 @@
 # AvanteMove AI API
 API to access the IA to generate inspirational phrases based on user beliefs or another required context. This software can be extended.
 
+See: [Package Structure](#package-structure)
+
+## Summary
+1. [Before Running Locally](#before-running-locally)
+2. [How to Run](#how-to-run)
+3. [Request Body](#request-body)
+4. [Response Body](#response-body)
+5. [Package Structure](#package-structure)
+
 ## Before Running Locally
 At [.env.example](.env.example) you can find our environment variables. You need to set the value of:
 
@@ -58,6 +67,28 @@ Status Code: 400 | 500
 {
   "message": "your error message here"
 }
+```
+
+## Package Structure
+Everything began at [app.ts](app.ts)!
+
+```commandline
+src/
+├──controllers/
+├──core/
+├──dtos/
+├──exceptions/
+├──models/
+├──routes/
+├──services
+└──utils
+.env.example
+.gitignore
+app.ts
+LICENSE
+package.json
+README.md
+tsconfig.ts
 ```
 
 ---
