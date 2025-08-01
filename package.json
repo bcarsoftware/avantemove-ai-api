@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@ai-sdk/deepinfra": "^1.0.0",
     "@types/express": "^5.0.3",
     "@types/typescript": "^0.4.29",
     "ai": "^5.0.0",
