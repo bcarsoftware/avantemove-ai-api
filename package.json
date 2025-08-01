@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@ai-sdk/google": "^2.0.0",
+    "@types/express": "^5.0.3",
+    "@types/typescript": "^0.4.29",
+    "ai": "^5.0.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0"
+  }
+}
