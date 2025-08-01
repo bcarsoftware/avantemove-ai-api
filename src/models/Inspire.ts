@@ -1,3 +1,3 @@
 export class Inspire {
-    text: string;
+    text: string = "";
 }
