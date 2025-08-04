@@ -19,7 +19,15 @@ Before running. You can generate a new API Key at [Google AI Studio](https://ais
 
 After, you must copy and paste to the environment variable known here.
 
-If you get it, we can the following steps.
+**If you get it, we can the following steps:**
+
+As this project is built on [TypeScript](https://www.typescriptlang.org/) + [NodeJS](https://nodejs.org/), you need to run the following command:
+
+```commandline
+npm install
+```
+
+**NOTE:** If you're not Node installed, please install it before. This project is built on Node==22.16.
 
 ## How To Run
 If you've made the steps [here](#before-running-locally), you can run:
